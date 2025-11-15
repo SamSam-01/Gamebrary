@@ -1,0 +1,55 @@
+{
+  "title": "Skull King",
+  "description": "Un jeu de plis stratégique où vous devez prédire exactement combien de plis vous allez remporter. Plus vous êtes précis, plus vous gagnez de points !",
+  "minPlayers": 2,
+  "maxPlayers": 6,
+  "durationMinutes": 30,
+  "ageMin": 8,
+  "complexity": 2,
+  "rules": {
+    "sections": [
+      {
+        "title": "Objectif du jeu",
+        "content": "Skull King se joue en 10 manches. À chaque manche, les joueurs doivent annoncer combien de plis ils pensent remporter, puis jouer pour atteindre exactement ce nombre. Une prédiction correcte rapporte des points, une erreur en fait perdre !"
+      },
+      {
+        "title": "Mise en place",
+        "content": "Mélangez toutes les cartes et distribuez-en une à chaque joueur pour la première manche. À la manche 2, chacun reçoit 2 cartes, et ainsi de suite jusqu'à la manche 10 où chaque joueur reçoit 10 cartes."
+      },
+      {
+        "title": "Annonce des plis",
+        "content": "À tour de rôle, chaque joueur annonce le nombre de plis qu'il pense remporter cette manche (de 0 au nombre de cartes en main). Le donneur annonce en dernier."
+      },
+      {
+        "title": "Déroulement d'un pli",
+        "content": "Le joueur à gauche du donneur joue une carte. Les autres joueurs doivent suivre la couleur si possible. Le joueur avec la carte la plus forte remporte le pli. Les cartes spéciales (Pirates, Sirènes, Skull King) ont des pouvoirs particuliers."
+      },
+      {
+        "title": "Cartes spéciales",
+        "content": "Skull King bat les Pirates. Les Pirates battent les Sirènes. Les Sirènes battent toutes les cartes numérotées. Les cartes Échappée peuvent être jouées à tout moment sans suivre la couleur."
+      },
+      {
+        "title": "Calcul des points",
+        "content": "Si vous remportez exactement le nombre de plis annoncés : gagnez 20 points par pli annoncé. Si vous manquez votre annonce : perdez 10 points par pli d'écart. Bonus spéciaux pour capturer le Skull King avec un Pirate (+30) ou remporter 0 pli après avoir annoncé 0 (+10 par carte)."
+      },
+      {
+        "title": "Fin de partie",
+        "content": "Après 10 manches, le joueur avec le plus de points remporte la partie !"
+      }
+    ]
+  },
+  "scoringSystem": {
+    "name": "Standard Skull King",
+    "config": {
+      "type": "prediction",
+      "correctPrediction": 20,
+      "perTrickBonus": 10,
+      "missedPredictionPenalty": -10,
+      "specialBonuses": {
+        "pirateCaputuresKing": 30,
+        "zeroBid": 10
+      }
+    },
+    "isAutomated": true
+  }
+}
